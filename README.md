@@ -4,13 +4,13 @@ See https://github.com/HackerNews/API for full documentation.
 
 ## Installation
 
-``sh
+```sh
 gem install hnrb 
-``
+```
 
 ### Usage:
 
-``rb
+```rb
 2.1.2 :001 > require 'hnrb'
  => true
 2.1.2 :002 > hn = HNrb.new
@@ -25,9 +25,8 @@ gem install hnrb
  => [8426148, 8426349, 8426558, ... ]
 2.1.2 :016 > hn.get_changed_items_and_profiles
  => {"items"=>[8426848, 8426299, 8426849, ... ], "profiles"=>["PhasmaFelis", "roldie", "Chirael", ... ]}
-``
+```
 
 ### License
 
-http://opensource.org/licenses/MIT}`
-
+http://opensource.org/licenses/MIT
