@@ -2,6 +2,8 @@
 
 See https://github.com/HackerNews/API for full documentation.
 
+RubyGems: https://rubygems.org/gems/hnrb
+
 ## Installation
 
 ```sh
