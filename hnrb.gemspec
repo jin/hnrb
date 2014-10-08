@@ -1,5 +1,7 @@
-$LOAD_PATH.unshift File.dirname(__FILE__)
-require 'lib/hnrb/version'
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
+require 'hnrb/version'
 
 Gem::Specification.new do |s|
   s.name        = 'hnrb'
@@ -12,5 +14,7 @@ Gem::Specification.new do |s|
   s.homepage    =
     'http://rubygems.org/gems/hnrb'
   s.license       = 'MIT'
+  s.require_paths = %w(lib)
+  s.files += Dir.glob('lib/**/*.rb')
   s.required_rubygems_version = ">= 1.3.6"
 end

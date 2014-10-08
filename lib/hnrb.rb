@@ -1,8 +1,8 @@
 require 'json'
 require 'net/http'
 
-require_relative 'user'
-require_relative 'item'
+require 'hnrb/user'
+require 'hnrb/item'
 
 class HNrb 
 
