@@ -1,0 +1,2 @@
+class Hnrb
+end
