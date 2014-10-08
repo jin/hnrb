@@ -1,6 +1,9 @@
 require 'json'
 require 'net/http'
 
+require_relative 'user'
+require_relative 'item'
+
 class HNrb 
 
   BASE_URL = "https://hacker-news.firebaseio.com/v0/"
@@ -23,11 +26,11 @@ class HNrb
   end
 
   def get_item(item_id)
-    send_get_request_to BASE_URL + "item/#{item_id}.json" 
+    Item.new(send_get_request_to BASE_URL + "item/#{item_id}.json")
   end
 
   def get_user(username)
-    send_get_request_to BASE_URL + "user/#{username}.json"
+    User.new(send_get_request_to BASE_URL + "user/#{username}.json")
   end
 
   def get_top_stories

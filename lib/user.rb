@@ -2,12 +2,12 @@ class User
 
   PROPERTIES = [:id, :delay, :created, :karma, :about, :submitted]
   PROPERTIES.each do |p|
-    attr_accessor prop
+    attr_accessor p 
   end
 
   def initialize(attributes = {})
     attributes.each do |k, v|
-      self.send("#{k}=", v) if PROPERTIES.member? key
+      self.send("#{k.to_sym}=", v) if PROPERTIES.member? k.to_sym
     end
   end
 
